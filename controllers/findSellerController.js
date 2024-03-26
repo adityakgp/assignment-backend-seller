@@ -10,6 +10,11 @@ exports.findSellers = async (req, res) => {
           return res.status(400).json({ error: 'Invalid request. Please provide an array of items.' });
         }
         const catalogData = await Catalog.find({item: { $in: items }});
+
+        if (catalogData.length != items.length) {
+          return res.status(400).json({ error: 'No seller sells the provided item(s).' });
+      }
+
         const sellersMap = {};
     
         // Initialize sellers map with empty arrays
@@ -29,6 +34,11 @@ exports.findSellers = async (req, res) => {
           return prev.filter(seller => curr.includes(seller));
         });
         
+
+        if (allSellers.length === 0) {
+          return res.status(400).json({ error: 'No seller sells all the provided items together.' });
+      }
+
         const sellerData = await Seller.find({});
         const sellersWithDetails = allSellers.map(sellerName => {
           const seller = sellerData.find(seller => seller.name === sellerName);
@@ -53,8 +63,7 @@ exports.findSellers = async (req, res) => {
       // Return names of sorted sellers
       const sortedSellers=[]
       for (let idx = 0; idx < sellersWithDetails.length; idx++) {
-          sortedSellers[idx] = sellersWithDetails[idx]._doc.name;
-          
+        sortedSellers.push([sellersWithDetails[idx]._doc.name, (String(sellersWithDetails[idx].distance)+" meters")]);     
       }
   
       res.json({ sellers: sortedSellers});

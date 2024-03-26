@@ -6,12 +6,16 @@ const SellerSchema = mongoose.Schema(
             type: String,
             required: true
         },
+        zip: {
+            type: Number,
+            required: true
+        },
         lat: {
-            type: String,
+            type: Number,
             required: true
         },
         long: {
-            type: String,
+            type: Number,
             required: true
         }
     },

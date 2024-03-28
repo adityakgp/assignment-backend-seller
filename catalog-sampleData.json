@@ -1,0 +1,82 @@
+[
+    {
+      "_id": "6602c94750559632894c7ca8",
+      "item": "cake",
+      "price": 256,
+      "description": "flavoured bread",
+      "sellers": [
+        "seller_5"
+      ],
+      "createdAt": "2024-03-26T13:10:31.754Z",
+      "updatedAt": "2024-03-26T13:10:31.754Z",
+      "__v": 0
+    },
+    {
+      "_id": "6603e375665674ab5e56990c",
+      "item": "apple",
+      "price": 100,
+      "description": "red juicy ruit",
+      "sellers": [
+        "seller_1",
+        "seller_2",
+        "seller_3"
+      ],
+      "createdAt": "2024-03-27T09:14:29.284Z",
+      "updatedAt": "2024-03-27T09:14:29.284Z",
+      "__v": 0
+    },
+    {
+      "_id": "6603e404665674ab5e56990e",
+      "item": "milk",
+      "price": 20,
+      "description": "dairy drink",
+      "sellers": [
+        "seller_2",
+        "seller_3"
+      ],
+      "createdAt": "2024-03-27T09:16:52.985Z",
+      "updatedAt": "2024-03-27T09:16:52.985Z",
+      "__v": 0
+    },
+    {
+      "_id": "6603e46b665674ab5e569910",
+      "item": "aata",
+      "price": 20,
+      "description": "wheat flour",
+      "sellers": [
+        "seller_3",
+        "seller_4",
+        "seller_5"
+      ],
+      "createdAt": "2024-03-27T09:18:35.786Z",
+      "updatedAt": "2024-03-27T09:18:35.786Z",
+      "__v": 0
+    },
+    {
+      "_id": "6603e60635746bacfcc11a77",
+      "item": "butter",
+      "price": 20,
+      "description": "milk product",
+      "sellers": [
+        "seller_3",
+        "seller_4",
+        "seller_1"
+      ],
+      "createdAt": "2024-03-27T09:25:26.358Z",
+      "updatedAt": "2024-03-27T09:25:26.358Z",
+      "__v": 0
+    },
+    {
+      "_id": "6603e67d35746bacfcc11a79",
+      "item": "colgate",
+      "price": 50,
+      "description": "toothpaste",
+      "sellers": [
+        "seller_4",
+        "seller_1"
+      ],
+      "createdAt": "2024-03-27T09:27:25.609Z",
+      "updatedAt": "2024-03-27T09:27:25.609Z",
+      "__v": 0
+    }
+  ]

@@ -10,7 +10,6 @@ app.use(express.json());
 app.use('/api', findSellerRoutes);
 app.use('/api', sellersRoutes);
 app.use('/api', catalogRoutes);
-
 mongoose.connect("mongodb+srv://adityadasc24:QrMbv3ZNjrzyH634@backenddb.3pjzxaz.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB")
 .then(()=>{
     console.log("connected to database!")

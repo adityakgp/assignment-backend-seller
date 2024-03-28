@@ -11,10 +11,9 @@ exports.seller = async (req, res) => {
 
 exports.sellers = async (req, res) => {
     try {
-        const sellers = await Seller.find({}); // using {} to get every detail
+        const sellers = await Seller.find({});
         res.status(200).json(sellers);
     } catch (error) {
-        // console.log(error); // nopt using because it just shows on console
         res.status(500).json({message: error.message});
     }
 };

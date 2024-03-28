@@ -16,20 +16,19 @@ exports.findSellers = async (req, res) => {
       }
 
         const sellersMap = {};
-    
-        // Initialize sellers map with empty arrays
+
         catalogData.forEach(entry => {
           sellersMap[entry.item] = [];
         });
     
-        // Populate sellers map with sellers selling each item
+
         catalogData.forEach(entry => {
           if (sellersMap.hasOwnProperty(entry.item)) {
             sellersMap[entry.item] = sellersMap[entry.item].concat(entry.sellers);
           }
         });
     
-        // Filter out sellers who sell all the given items
+
         const allSellers = Object.values(sellersMap).reduce((prev, curr) => {
           return prev.filter(seller => curr.includes(seller));
         });
@@ -55,12 +54,12 @@ exports.findSellers = async (req, res) => {
               };
           }
           return null;
-      }).filter(Boolean); // Filter out undefined values
+      }).filter(Boolean); 
       
-      // Sort sellers by distance in ascending order
+      
       sellersWithDetails.sort((a, b) => a.distance - b.distance);
       
-      // Return names of sorted sellers
+
       const sortedSellers=[]
       for (let idx = 0; idx < sellersWithDetails.length; idx++) {
         sortedSellers.push([sellersWithDetails[idx]._doc.name, (String(sellersWithDetails[idx].distance)+" meters")]);     
